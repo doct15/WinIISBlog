@@ -1,0 +1,42 @@
+bmcgehee/WinIISBlog:
+  Env:
+    - PORT: 8085
+    - SITE: blog
+    - APPDIR: c:\blog
+  PkgInclude:
+    - '*.zip'
+    - '*.exe'
+  PreInstall:
+    - echo "Begin PreInstall"
+    - echo/%%SITE%%=%SITE%
+    - for /F "tokens=*" %%a in ('%windir%\system32\inetsrv\appcmd list site %SITE%') do set RESPONSE=%%a
+    - echo/%%RESPONSE%%=%RESPONSE% 
+    - if "%RESPONSE%"=="" (
+    -   echo "%SITE% doesn't exist"
+    - ) else (
+    -   echo "%SITE% does exist. Deleting"
+    -   (%windir%\system32\inetsrv\appcmd delete site %SITE%)
+    - )
+    - echo "end IF"
+    - rmdir /S/Q %APPDIR%
+    - mkdir %APPDIR%
+    - (%windir%\system32\inetsrv\appcmd add site /name:%SITE% /physicalPath:%APPDIR% /bindings:http://*:%PORT%)
+    - echo "Done PreInstall"
+  PostInstall:
+    - echo "Begin PostInstall"
+    - 7za x *.zip -o%APPDIR%\
+    - attrib -r %APPDIR%\App_Data /s /d
+    - icacls "%APPDIR%\App_Data" /grant IIS_IUSRS:(OI)(CI)F /t
+    - icacls "%APPDIR%\App_Data" /grant IUSR:(OI)(CI)F /t
+    - echo "Done PostInstall"
+  Start:
+    - echo "Begin Start"
+    - (%windir%\system32\inetsrv\appcmd start site %SITE%)
+    - echo "Done Start"
+    - echo "Opening Firewall for Port %PORT%"
+    - netsh advfirewall firewall add rule name="TCP Port %PORT%" dir=in action=allow protocol=TCP localport=%PORT%
+    - netsh advfirewall firewall delete rule name="TCP Port %PORT%"
+    - netsh advfirewall firewall add rule name="TCP Port %PORT%" dir=in action=allow protocol=TCP localport=%PORT%
+    - netsh advfirewall firewall add rule name="TCP Port %PORT%" dir=out action=allow protocol=TCP localport=%PORT%
+    - echo "Done PostInstall"
+
