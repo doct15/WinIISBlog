@@ -11,6 +11,13 @@ bmcgehee/WinIISBlog:
     - '*.exe'
   PreInstall:
     - echo "Begin PreInstall"
+    # Unremark the following to install IIS, ASP, and dotNET
+    #- echo "Installing IIS"
+    #- dism /enable-feature /online /featurename:IIS-WebServer /all
+    #- dism /enable-feature /online /featureName:IIS-ASP /all
+    #- dism /enable-feature /online /featureName:IIS-ASPNET /all
+    #- dism /enable-feature /online /featureName:IIS-ASPNET45 /all
+    #- echo "Done Installing IIS"
     - echo/%%SITE%%=%SITE%
     - for /F "tokens=*" %%a in ('%windir%\system32\inetsrv\appcmd list site %SITE%') do set RESPONSE=%%a
     - echo/%%RESPONSE%%=%RESPONSE% 
