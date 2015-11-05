@@ -13,6 +13,8 @@ bmcgehee/WinIISBlog:
     - echo "Begin PreInstall"
     # Unremark the following to install IIS, ASP, and dotNET
     - echo "Installing IIS"
+    - echo "Webserver-role"
+    - dism /enable-feature /online /featurename:IIS-WebServerRole /all
     - echo "Webserver"
     - dism /enable-feature /online /featurename:IIS-WebServer
     - echo "ASP"
