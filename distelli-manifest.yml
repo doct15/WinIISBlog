@@ -21,6 +21,10 @@ bmcgehee/WinIISBlog:
     - dism /enable-feature /online /featurename:IIS-ISAPIExtensions
     - echo "ASP"
     - dism /enable-feature /online /featureName:IIS-ASP
+    - echo "IIS-ISAPIFilter"
+    - dism /enable-feature /online /featureName:IIS-ISAPIFilter
+    - echo "IIS-NetFxExtensibility"
+    - dism /enable-feature /online /featureName:IIS-NetFxExtensibility
     - echo "ASPNET"
     - dism /enable-feature /online /featureName:IIS-ASPNET
     - echo "ASPNET45"
