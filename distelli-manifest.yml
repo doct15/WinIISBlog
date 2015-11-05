@@ -28,7 +28,7 @@ bmcgehee/WinIISBlog:
     - echo "ASPNET"
     - dism /enable-feature /online /featureName:IIS-ASPNET
     - echo "ASPNET45"
-    - dism /enable-feature /online /featureName:IIS-ASPNET45
+    #- dism /enable-feature /online /featureName:IIS-ASPNET45
     - dism /enable-feature /online /featurename:IIS-ApplicationDevelopment
     - dism /enable-feature /online /featurename:IIS-ASP
     - dism /enable-feature /online /featurename:IIS-ASPNET
@@ -56,13 +56,14 @@ bmcgehee/WinIISBlog:
     - dism /enable-feature /online /featurename:IIS-IPSecurity
     - dism /enable-feature /online /featurename:IIS-ISAPIExtensions
     - dism /enable-feature /online /featurename:IIS-ISAPIFilter
+    - dism /enable-feature /online /featurename:IIS-Metabase
+    - dism /enable-feature /online /featurename:IIS-WMICompatibility        
     - dism /enable-feature /online /featurename:IIS-LegacyScripts
     - dism /enable-feature /online /featurename:IIS-LegacySnapIn
     - dism /enable-feature /online /featurename:IIS-LoggingLibraries
     - dism /enable-feature /online /featurename:IIS-ManagementConsole
     - dism /enable-feature /online /featurename:IIS-ManagementScriptingTools
     - dism /enable-feature /online /featurename:IIS-ManagementService
-    - dism /enable-feature /online /featurename:IIS-Metabase
     - dism /enable-feature /online /featurename:IIS-NetFxExtensibility
     - dism /enable-feature /online /featurename:IIS-ODBCLogging
     - dism /enable-feature /online /featurename:IIS-Performance
@@ -77,7 +78,6 @@ bmcgehee/WinIISBlog:
     - dism /enable-feature /online /featurename:IIS-WebServerManagementTools
     - dism /enable-feature /online /featurename:IIS-WebServerRole
     - dism /enable-feature /online /featurename:IIS-WindowsAuthentication
-    - dism /enable-feature /online /featurename:IIS-WMICompatibility
     - dism /enable-feature /online /featurename:WAS-ConfigurationAPI
     - dism /enable-feature /online /featurename:WAS-NetFxEnvironment
     - dism /enable-feature /online /featurename:WAS-ProcessModel
