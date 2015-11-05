@@ -14,15 +14,15 @@ bmcgehee/WinIISBlog:
     # Unremark the following to install IIS, ASP, and dotNET
     - echo "Installing IIS"
     - echo "Webserver-role"
-    - dism /enable-feature /online /featurename:IIS-WebServerRole /all
+    - dism /enable-feature /online /featurename:IIS-WebServerRole
     - echo "Webserver"
     - dism /enable-feature /online /featurename:IIS-WebServer
     - echo "ASP"
-    - dism /enable-feature /online /featureName:IIS-ASP /all
+    - dism /enable-feature /online /featureName:IIS-ASP
     - echo "ASPNET"
-    - dism /enable-feature /online /featureName:IIS-ASPNET /all
+    - dism /enable-feature /online /featureName:IIS-ASPNET
     - echo "ASPNET45"
-    - dism /enable-feature /online /featureName:IIS-ASPNET45 /all
+    - dism /enable-feature /online /featureName:IIS-ASPNET45
     - echo "Done Installing IIS"
     - echo/%%SITE%%=%SITE%
     - for /F "tokens=*" %%a in ('%windir%\system32\inetsrv\appcmd list site %SITE%') do set RESPONSE=%%a
