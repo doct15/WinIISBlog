@@ -14,7 +14,7 @@ bmcgehee/WinIISBlog:
     # Unremark the following to install IIS, ASP, and dotNET
     - echo "Installing IIS"
     - echo "Webserver"
-    - dism /enable-feature /online /featurename:IIS-WebServer /all
+    - dism /enable-feature /online /featurename:IIS-WebServer
     - echo "ASP"
     - dism /enable-feature /online /featureName:IIS-ASP /all
     - echo "ASPNET"
