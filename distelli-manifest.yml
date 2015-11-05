@@ -1,7 +1,7 @@
 bmcgehee/WinIISBlog:
   Env:
     # Define the TCP port you want the IIS application to listen on
-    - PORT: 8085
+    - PORT: "8085"
     # Define the Name for the IIS application
     - SITE: blog2
     # Define the Directory full path where the IIS application should reside
