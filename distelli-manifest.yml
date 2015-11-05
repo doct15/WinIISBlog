@@ -40,9 +40,9 @@ bmcgehee/WinIISBlog:
     - dism /enable-feature /online /featurename:IIS-DefaultDocument
     - dism /enable-feature /online /featurename:IIS-DigestAuthentication
     - dism /enable-feature /online /featurename:IIS-DirectoryBrowsing
-    - dism /enable-feature /online /featurename:IIS-FTPExtensibility
     - dism /enable-feature /online /featurename:IIS-FTPServer
     - dism /enable-feature /online /featurename:IIS-FTPSvc
+    - dism /enable-feature /online /featurename:IIS-FTPExtensibility
     - dism /enable-feature /online /featurename:IIS-HealthAndDiagnostics
     - dism /enable-feature /online /featurename:IIS-HostableWebCore
     - dism /enable-feature /online /featurename:IIS-HttpCompressionDynamic
