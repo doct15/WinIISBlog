@@ -9,6 +9,7 @@ bmcgehee/WinIISBlog:
   PkgInclude:
     - '*.zip'
     - '*.exe'
+  PreInstallTimeout: 1800
   PreInstall:
     - echo "Begin PreInstall"
     # Unremark the following to install IIS, ASP, and dotNET
@@ -27,7 +28,7 @@ bmcgehee/WinIISBlog:
     - dism /enable-feature /online /featureName:IIS-NetFxExtensibility
     - echo "ASPNET"
     - dism /enable-feature /online /featureName:IIS-ASPNET
-    - echo "ASPNET45"
+    #- echo "ASPNET45"
     #- dism /enable-feature /online /featureName:IIS-ASPNET45
     - dism /enable-feature /online /featurename:IIS-ApplicationDevelopment
     - dism /enable-feature /online /featurename:IIS-ASP
