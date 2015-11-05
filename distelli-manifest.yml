@@ -18,7 +18,7 @@ bmcgehee/WinIISBlog:
     - echo "Webserver"
     - dism /enable-feature /online /featurename:IIS-WebServer
     - echo "IIS-ISAPIExtensions"
-    - dism /enable-feature /online /featurename:IIS-ISAPIExetnsions
+    - dism /enable-feature /online /featurename:IIS-ISAPIExtensions
     - echo "ASP"
     - dism /enable-feature /online /featureName:IIS-ASP
     - echo "ASPNET"
