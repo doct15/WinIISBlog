@@ -13,77 +13,80 @@ bmcgehee/WinIISBlog:
   PreInstall:
     - echo "Begin PreInstall"
     # Unremark the following to install IIS, ASP, and dotNET
-    - echo "Installing IIS"
-    - echo "Webserver-role"
-    - dism /enable-feature /online /featurename:IIS-WebServerRole
-    - echo "Webserver"
-    - dism /enable-feature /online /featurename:IIS-WebServer
-    - echo "IIS-ISAPIExtensions"
-    - dism /enable-feature /online /featurename:IIS-ISAPIExtensions
-    - echo "ASP"
-    - dism /enable-feature /online /featureName:IIS-ASP
-    - echo "IIS-ISAPIFilter"
-    - dism /enable-feature /online /featureName:IIS-ISAPIFilter
-    - echo "IIS-NetFxExtensibility"
-    - dism /enable-feature /online /featureName:IIS-NetFxExtensibility
-    - echo "ASPNET"
-    - dism /enable-feature /online /featureName:IIS-ASPNET
+    #- echo "Installing IIS"
+    #- echo "Webserver-role"
+    #- dism /enable-feature /online /featurename:IIS-WebServerRole
+    #- echo "Webserver"
+    #- dism /enable-feature /online /featurename:IIS-WebServer
+    #- echo "IIS-ISAPIExtensions"
+    #- dism /enable-feature /online /featurename:IIS-ISAPIExtensions
+    #- echo "ASP"
+    #- dism /enable-feature /online /featureName:IIS-ASP
+    #- echo "IIS-ISAPIFilter"
+    #- dism /enable-feature /online /featureName:IIS-ISAPIFilter
+    #- echo "IIS-NetFxExtensibility"
+    #- dism /enable-feature /online /featureName:IIS-NetFxExtensibility
+    #- echo "ASPNET"
+    #- dism /enable-feature /online /featureName:IIS-ASPNET
     #- echo "ASPNET45"
     #- dism /enable-feature /online /featureName:IIS-ASPNET45
-    - dism /enable-feature /online /featurename:IIS-ApplicationDevelopment
-    - dism /enable-feature /online /featurename:IIS-ASP
-    - dism /enable-feature /online /featurename:IIS-ASPNET
-    - dism /enable-feature /online /featurename:IIS-BasicAuthentication
-    - dism /enable-feature /online /featurename:IIS-CGI
-    - dism /enable-feature /online /featurename:IIS-ClientCertificateMappingAuthentication
-    - dism /enable-feature /online /featurename:IIS-CommonHttpFeatures
-    - dism /enable-feature /online /featurename:IIS-CustomLogging
-    - dism /enable-feature /online /featurename:IIS-DefaultDocument
-    - dism /enable-feature /online /featurename:IIS-DigestAuthentication
-    - dism /enable-feature /online /featurename:IIS-DirectoryBrowsing
-    - dism /enable-feature /online /featurename:IIS-FTPServer
-    - dism /enable-feature /online /featurename:IIS-FTPSvc
-    - dism /enable-feature /online /featurename:IIS-FTPExtensibility
-    - dism /enable-feature /online /featurename:IIS-HealthAndDiagnostics
-    - dism /enable-feature /online /featurename:IIS-HostableWebCore
-    - dism /enable-feature /online /featurename:IIS-HttpCompressionDynamic
-    - dism /enable-feature /online /featurename:IIS-HttpCompressionStatic
-    - dism /enable-feature /online /featurename:IIS-HttpErrors
-    - dism /enable-feature /online /featurename:IIS-HttpLogging
-    - dism /enable-feature /online /featurename:IIS-HttpRedirect
-    - dism /enable-feature /online /featurename:IIS-HttpTracing
-    - dism /enable-feature /online /featurename:IIS-IIS6ManagementCompatibility
-    - dism /enable-feature /online /featurename:IIS-IISCertificateMappingAuthentication
-    - dism /enable-feature /online /featurename:IIS-IPSecurity
-    - dism /enable-feature /online /featurename:IIS-ISAPIExtensions
-    - dism /enable-feature /online /featurename:IIS-ISAPIFilter
-    - dism /enable-feature /online /featurename:IIS-Metabase
-    - dism /enable-feature /online /featurename:IIS-WMICompatibility        
-    - dism /enable-feature /online /featurename:IIS-LegacyScripts
-    - dism /enable-feature /online /featurename:IIS-LegacySnapIn
-    - dism /enable-feature /online /featurename:IIS-LoggingLibraries
-    - dism /enable-feature /online /featurename:IIS-ManagementConsole
-    - dism /enable-feature /online /featurename:IIS-ManagementScriptingTools
-    - dism /enable-feature /online /featurename:IIS-ManagementService
-    - dism /enable-feature /online /featurename:IIS-NetFxExtensibility
-    - dism /enable-feature /online /featurename:IIS-ODBCLogging
-    - dism /enable-feature /online /featurename:IIS-Performance
-    - dism /enable-feature /online /featurename:IIS-RequestFiltering
-    - dism /enable-feature /online /featurename:IIS-RequestMonitor
-    - dism /enable-feature /online /featurename:IIS-Security
-    - dism /enable-feature /online /featurename:IIS-ServerSideIncludes
-    - dism /enable-feature /online /featurename:IIS-StaticContent
-    - dism /enable-feature /online /featurename:IIS-URLAuthorization
-    - dism /enable-feature /online /featurename:IIS-WebDAV
-    - dism /enable-feature /online /featurename:IIS-WebServer
-    - dism /enable-feature /online /featurename:IIS-WebServerManagementTools
-    - dism /enable-feature /online /featurename:IIS-WebServerRole
-    - dism /enable-feature /online /featurename:IIS-WindowsAuthentication
-    - dism /enable-feature /online /featurename:WAS-ConfigurationAPI
-    - dism /enable-feature /online /featurename:WAS-NetFxEnvironment
-    - dism /enable-feature /online /featurename:WAS-ProcessModel
-    - dism /enable-feature /online /featurename:WAS-WindowsActivationService
-    - echo "Done Installing IIS"
+    #- dism /enable-feature /online /featurename:IIS-ApplicationDevelopment
+    #- dism /enable-feature /online /featurename:IIS-ASP
+    #- dism /enable-feature /online /featurename:IIS-ASPNET
+    #- dism /enable-feature /online /featurename:IIS-BasicAuthentication
+    #- dism /enable-feature /online /featurename:IIS-CGI
+    #- dism /enable-feature /online /featurename:IIS-ClientCertificateMappingAuthentication
+    #- dism /enable-feature /online /featurename:IIS-CommonHttpFeatures
+    #- dism /enable-feature /online /featurename:IIS-CustomLogging
+    #- dism /enable-feature /online /featurename:IIS-DefaultDocument
+    #- dism /enable-feature /online /featurename:IIS-DigestAuthentication
+    #- dism /enable-feature /online /featurename:IIS-DirectoryBrowsing
+    #- dism /enable-feature /online /featurename:IIS-FTPServer
+    #- dism /enable-feature /online /featurename:IIS-FTPSvc
+    #- dism /enable-feature /online /featurename:IIS-FTPExtensibility
+    #- dism /enable-feature /online /featurename:IIS-HealthAndDiagnostics
+    #- dism /enable-feature /online /featurename:IIS-HostableWebCore
+    #- dism /enable-feature /online /featurename:IIS-HttpCompressionDynamic
+    #- dism /enable-feature /online /featurename:IIS-HttpCompressionStatic
+    #- dism /enable-feature /online /featurename:IIS-HttpErrors
+    #- dism /enable-feature /online /featurename:IIS-HttpLogging
+    #- dism /enable-feature /online /featurename:IIS-HttpRedirect
+    #- dism /enable-feature /online /featurename:IIS-HttpTracing
+    #- dism /enable-feature /online /featurename:IIS-IIS6ManagementCompatibility
+    #- dism /enable-feature /online /featurename:IIS-IISCertificateMappingAuthentication
+    #- dism /enable-feature /online /featurename:IIS-IPSecurity
+    #- dism /enable-feature /online /featurename:IIS-ISAPIExtensions
+    #- dism /enable-feature /online /featurename:IIS-ISAPIFilter
+    #- dism /enable-feature /online /featurename:IIS-Metabase
+    #- dism /enable-feature /online /featurename:IIS-WMICompatibility        
+    #- dism /enable-feature /online /featurename:IIS-LegacyScripts
+    #- dism /enable-feature /online /featurename:ServerCore-FullServer
+    #- dism /enable-feature /online /featurename:IIS-LegacySnapIn
+    #- dism /enable-feature /online /featurename:IIS-LoggingLibraries
+    #- dism /enable-feature /online /featurename:IIS-ManagementConsole
+    #- dism /enable-feature /online /featurename:IIS-ManagementScriptingTools
+    #- dism /enable-feature /online /featurename:IIS-ManagementService
+    #- dism /enable-feature /online /featurename:IIS-NetFxExtensibility
+    #- dism /enable-feature /online /featurename:IIS-ODBCLogging
+    #- dism /enable-feature /online /featurename:IIS-Performance
+    #- dism /enable-feature /online /featurename:IIS-RequestFiltering
+    #- dism /enable-feature /online /featurename:IIS-RequestMonitor
+    #- dism /enable-feature /online /featurename:IIS-Security
+    #- dism /enable-feature /online /featurename:IIS-ServerSideIncludes
+    #- dism /enable-feature /online /featurename:IIS-StaticContent
+    #- dism /enable-feature /online /featurename:IIS-URLAuthorization
+    #- dism /enable-feature /online /featurename:IIS-WebDAV
+    #- dism /enable-feature /online /featurename:IIS-WebServer
+    #- dism /enable-feature /online /featurename:IIS-WebServerManagementTools
+    #- dism /enable-feature /online /featurename:IIS-WebServerRole
+    #- dism /enable-feature /online /featurename:IIS-WindowsAuthentication
+    #- dism /enable-feature /online /featurename:WAS-WindowsActivationService
+    #- dism /enable-feature /online /featurename:WAS-ConfigurationAPI
+    #- dism /enable-feature /online /featurename:WAS-NetFxEnvironment
+    #- dism /enable-feature /online /featurename:WAS-ProcessModel
+
+    #- echo "Done Installing IIS"
+    
     - echo/%%SITE%%=%SITE%
     - for /F "tokens=*" %%a in ('%windir%\system32\inetsrv\appcmd list site %SITE%') do set RESPONSE=%%a
     - echo/%%RESPONSE%%=%RESPONSE% 
