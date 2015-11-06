@@ -23,7 +23,7 @@ bmcgehee/WinIISBlog:
     -   (%windir%\system32\inetsrv\appcmd delete site %SITE%)
     - )
 
-    - for /F "tokens=*" %%a in ('dir %APPDIR%') do set RESPONSE=%%a
+    - for /F "tokens=*" %%a in ('dir /B %APPDIR%') do set RESPONSE=%%a
     - echo/%%RESPONSE%%=%RESPONSE% 
     - if "%RESPONSE%"=="File not Found" (
     -   echo "%APPDIR% doesn't exist. Creating"
